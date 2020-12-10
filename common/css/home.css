@@ -6,8 +6,17 @@ body.home{
 }
 
 body.home h1.logo{
+	width: 90%;
 	margin-bottom: 15px;
 }
+
+@media screen and (min-width: 868px) {
+	body.home h1.logo{
+		margin-bottom: 15px;
+		width: 100%;
+	}
+}
+
 
 body.home div.mainpic{
 	margin-bottom: 20px;
