@@ -60,12 +60,14 @@ body{
 }
 
 p.logo{
-	width: 730px;
+	/* width: 730px; */
 	height: 90px;
 	margin-bottom: 20px;
 	padding-top: 10px;
 	padding-left: 20px;
-	background: url("/biz-contest2021/common/images/bg_header.gif") no-repeat 0 0;
+	/* background: url("/biz-contest2021/common/images/bg_header.gif") no-repeat 0 0; */
+	background-color: #348E60;
+	border-radius: 0rem 0rem 1rem 1rem;
 }
 
 /* main */
