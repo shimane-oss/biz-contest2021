@@ -23,7 +23,6 @@ body.category div.doc div.student{
 
 /* main > doc > section > section-header */
 div.doc div.section-header{
-	width: 560px;
 	overflow: hidden;
 	margin-bottom: 15px;
 }
@@ -41,21 +40,17 @@ div.doc p.summary{
 
 /* main > doc > section > section-body */
 div.doc div.section-body{
-	width: 560px;
 	overflow: hidden;
 }
 
 div.doc div.section-body p{
-	width: 265px;
 	float: left;
-	margin-right: 30px;
 }
 
 /* main > doc > section > section-body > section */
 div.doc div.section-body div.section{
-	width: 265px;
 	margin: 0;
-	float: right
+	float: left;
 }
 
 div.doc div.section-body h3{
