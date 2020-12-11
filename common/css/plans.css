@@ -6,8 +6,10 @@ body.plans h1{
 	color: #348E60;
 }
 
-body.plans th,td{
-	white-space: nowrap;
+body.plans th,td{}
+
+body.plans .nowrap {
+  white-space: nowrap;
 }
 
 body.plans th.planner{
@@ -16,4 +18,5 @@ body.plans th.planner{
 
 body.plans td.plan_name{
 	white-space: normal;
+	width: 11rem;
 }
