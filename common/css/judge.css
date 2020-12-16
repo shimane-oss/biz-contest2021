@@ -44,6 +44,8 @@ body.judge div.committee h2 img{
 	margin-bottom: 2px;
 }
 body.judge div.committee h2{
+	font-size: 1.5rem;
+	font-weight: bold;
 	color: #348E60;
 }
 
