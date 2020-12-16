@@ -29,7 +29,6 @@ em{
 }
 
 th{
-	font-weight: normal;
 	text-align:left;
 }
 
@@ -48,6 +47,11 @@ a img{
 }
 
 /* ------------------------------------------- */
+
+.container {
+	max-width: 750px !important;
+}
+
 body{
 	width: 750px;
 	margin: 0 auto;
@@ -55,12 +59,18 @@ body{
 }
 
 p.logo{
-	width: 730px;
+	/* width: 730px; */
 	height: 90px;
 	margin-bottom: 20px;
 	padding-top: 10px;
 	padding-left: 20px;
-	background: url("/biz-contest2021/common/images/bg_header.gif") no-repeat 0 0;
+	/* background: url("/biz-contest2021/common/images/bg_header.gif") no-repeat 0 0; */
+	background-color: #348E60;
+	border-radius: 0rem 0rem 1rem 1rem;
+}
+
+p.logo > a > img {
+	max-width: 80%;
 }
 
 /* main */
@@ -71,10 +81,7 @@ div.main{
 }
 
 /* main > doc */
-div.doc{
-	width: 570px;
-	float: right;
-}
+div.doc{}
 
 div.doc p,
 div.doc li{
@@ -172,36 +179,45 @@ div.doc div.info p{
 	margin-bottom: 5px;
 }
 
+
 /* main > menu */
-ul.menu{
-	width: 150px;
-	float: left;
-	padding-bottom: 5px;
-	background: #348E60 url("/biz-contest2021/common/images/bg_menu_bottom.gif") no-repeat left bottom;
-	list-style: none;
-	color: #fff;
+ul.menu {
+	display: none;
 }
 
-ul.menu li{
-	display: inline;
-}
+@media screen and (min-width: 868px) {
+  ul.menu{
+  	display: block;
+  	width: 150px !important;
+  	float: left;
+  	padding-bottom: 5px;
+  	background: #348E60 url("/biz-contest2021/common/images/bg_menu_bottom.gif") no-repeat left bottom;
+  	list-style: none;
+  	color: #fff;
+  }
 
-ul.menu a{
-	display: block;
-	margin-bottom: 14px;
-	padding-left: 10px;
-	color: #fff;
-}
+  ul.menu li{
+  	display: inline;
+  }
 
-ul.menu li.submenu a{
-	margin-top: 5px;
-	padding-top: 15px;
-	border-top: dashed 1px #fff;
-}
+  ul.menu a{
+  	display: block;
+  	margin-bottom: 14px;
+  	padding-left: 10px;
+  	color: #fff;
+  }
 
-ul.menu li.first a{
-	padding-top: 15px;
-	background: url("/biz-contest2021/common/images/bg_menu_top.gif") no-repeat 0 0;
+  ul.menu li.submenu a{
+  	margin-top: 5px;
+  	padding-top: 15px;
+  	border-top: dashed 1px #fff;
+  }
+
+  ul.menu li.first a{
+  	padding-top: 15px;
+  	background: url("/biz-contest2021/common/images/bg_menu_top.gif") no-repeat 0 0;
+	}
+
 }
 
 /* footer */
@@ -227,6 +243,7 @@ div.footer address{
 	display: block;
 	text-align: center;
 	font-size: 90%;
+	margin-bottom: 2rem;
 }
 
 div.footer address span.name{
@@ -238,4 +255,76 @@ div.footer address span.name{
 
 div.footer address span.tel{
 	margin-right: 1em;
+}
+
+
+/* hamburger button (open side menu) */
+.menu-side-btn{
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+	color: white;
+	background-color: rgb(95, 95, 95);
+	display: flex;
+}
+
+@media screen and (min-width: 868px) {
+/* hamburger button (open side menu)  */
+.menu-side-btn{
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+	color: #333;
+	display: none;
+}
+
+}
+
+/* side menu */
+.menu-side{
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+	background: #555;
+	overflow-y: auto;
+}
+.menu-side-item{
+  width: 100%;
+  height: auto;
+  padding: .5em 1em;
+  text-align: center;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.menu-side{
+	display: none;
+}
+
+.menu-side.is-active{
+	display: block;
+}
+
+
+.nowrap {
+	white-space: nowrap;
 }
