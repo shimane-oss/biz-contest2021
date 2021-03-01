@@ -44,7 +44,9 @@
 			keyToNext:				'n',		// (string) (n = next) Letter to show the next image.
 			// Don�t alter these variables in any way
 			imageArray:				[],
-			activeImage:			0
+			activeImage:			0,
+			maxWidth: 0,
+			maxHeight: 0
 		},settings);
 		// Caching the jQuery object with all elements matched
 		var jQueryMatchedObj = this; // This, in this context, refer to jQuery object
@@ -187,6 +189,15 @@
 			objImagePreloader.onload = function() {
 				$('#lightbox-image').attr('src',settings.imageArray[settings.activeImage][0]);
 				// Perfomance an effect in the image container resizing it
+        if ( settings.maxWidth && objImagePreloader.width > settings.maxWidth ) {
+					objImagePreloader.height = objImagePreloader.height * (settings.maxWidth / objImagePreloader.width);
+					objImagePreloader.width = settings.maxWidth;
+					jQuery('#lightbox-image').css('width', settings.maxWidth + 'px');
+			  } else if ( settings.maxHeight && objImagePreloader.height > settings.maxHeight ){
+					objImagePreloader.width = objImagePreloader.width * (settings.maxHeight / objImagePreloader.height);
+					objImagePreloader.height = settings.maxHeight;
+					jQuery('#lightbox-image').css('height', settings.maxHeight + 'px');
+			  }
 				_resize_container_image_box(objImagePreloader.width,objImagePreloader.height);
 				//	clear onLoad, IE behaves irratically with animated gifs otherwise
 				objImagePreloader.onload=function(){};
