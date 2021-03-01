@@ -30,6 +30,21 @@ body.final div.result{
 	border-bottom: solid 2px #ccc;
 }
 
+body.final div.result div.section h3{
+	margin-bottom: 15px;
+	padding: 3px 8px;
+	background: #348E60;
+	font-weight: normal;
+	color: #fff;
+	font-size: 100%;
+}
+
+body.final div.result div.section h4{
+	margin-bottom: 5px;
+	color: #348E60;
+	font-size: 100%;
+}
+
 body.final div.section{
 	width: 270px;
 	margin-bottom: 0;
